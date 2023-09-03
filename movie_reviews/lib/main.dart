@@ -53,8 +53,25 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,
-        title: Text("Movie Reviews"),
+        elevation: 0.0,
         backgroundColor: Colors.white,
+        title: Text(
+          "Movie Reviews",
+          style: TextStyle(
+            fontSize: 30,
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.person_outline,
+              color: Colors.black,
+            ),
+          )
+        ],
       ),
     );
   }
