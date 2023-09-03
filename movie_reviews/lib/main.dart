@@ -73,6 +73,26 @@ class HomePage extends StatelessWidget {
           )
         ],
       ),
+      body: Padding(
+        padding: const EdgeInsets.all(4.0),
+        child: ListView.builder(
+          itemCount: dataList.length,
+          itemBuilder: ((context, index) {
+            final image = dataList[index]["imgUrl"];
+            return Padding(
+              padding: const EdgeInsets.symmetric(vertical: 4),
+              child: Stack(alignment: Alignment.center, children: [
+                Image.network(
+                  image,
+                  width: 100,
+                  height: 220,
+                  fit: BoxFit.cover,
+                ),
+              ]),
+            );
+          }),
+        ),
+      ),
     );
   }
 }
