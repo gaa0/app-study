@@ -50,6 +50,12 @@ class HomePage extends StatelessWidget {
     ];
 
     // 화면에 보이는 영역
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: false,
+        title: Text("Movie Reviews"),
+        backgroundColor: Colors.white,
+      ),
+    );
   }
 }
