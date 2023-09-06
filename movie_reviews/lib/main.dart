@@ -50,6 +50,49 @@ class HomePage extends StatelessWidget {
     ];
 
     // 화면에 보이는 영역
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: false,
+        elevation: 0.0,
+        backgroundColor: Colors.white,
+        title: Text(
+          "Movie Reviews",
+          style: TextStyle(
+            fontSize: 30,
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.person_outline,
+              color: Colors.black,
+            ),
+          )
+        ],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(4.0),
+        child: ListView.builder(
+          itemCount: dataList.length,
+          itemBuilder: ((context, index) {
+            final image = dataList[index]["imgUrl"];
+            return Padding(
+              padding: const EdgeInsets.symmetric(vertical: 4),
+              child: Stack(alignment: Alignment.center, children: [
+                Image.network(
+                  image,
+                  width: 100,
+                  height: 220,
+                  fit: BoxFit.cover,
+                ),
+              ]),
+            );
+          }),
+        ),
+      ),
+    );
   }
 }
