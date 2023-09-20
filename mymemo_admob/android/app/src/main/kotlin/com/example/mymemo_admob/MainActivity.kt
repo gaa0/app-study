@@ -1,4 +1,4 @@
-package com.example.mymemo_admob
+package com.gayoung.mymemo_admob
 
 import io.flutter.embedding.android.FlutterActivity
 
